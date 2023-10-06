@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaUserCircle, FaSun, FaMoon } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider.jsx";
 
 const Navbar = () => {
+    const {user,logOut} = useContext(AuthContext);
+
+    const handleLogOut = () =>{
+        logOut()
+        .then(() =>{})
+        .catch(error =>{
+            console.log(error.message)
+        }) 
+    }
+
+    // theme toggle
+    const [theme, setTheme]  = useState('light');
+    const [themeIcon, setThemeIcon] = useState(true);
+
+    const handleToggleTheme = () =>{
+        setTheme(theme ==="light"? "dark": "light");
+        setThemeIcon(!themeIcon);
+    }
+    useEffect(() =>{
+        document.documentElement.setAttribute("data-theme", theme);
+    },[theme])
+
   return (
-    <div className="border-b-2 bg-base-100">
+    <div className="border-b-2 bg-cyan-100">
       <div className="navbar container mx-auto p-3 sm:p-5">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown ">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +49,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-cyan-100 rounded-box w-52"
             >
               <li>
                 <NavLink
@@ -79,7 +102,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link className="normal-case font-semibold text-xl sm:text-2xl p-0">
-            Flavor Fusion
+             Taste Master
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -128,9 +151,9 @@ const Navbar = () => {
         </div>
         <div className="navbar-end flex gap-2">
           <div>
-            { (
+            {user ? (
               <Link
-                // onClick={handleLogOut}
+                onClick={handleLogOut}
                 className="my-btn hover:bg-transparent transition-colors duration-200 ease-in-out"
               >
                 LogOut
@@ -144,7 +167,7 @@ const Navbar = () => {
               </Link>
             )}
           </div>
-          { (
+          {user && (
             <div
               className="tooltip tooltip-left"
               data-tip={user?.displayName || "Anonymous User"}
@@ -166,9 +189,9 @@ const Navbar = () => {
             <button
               className="w-7 h-7 sm:w-10 sm:h-10 text-lg flex justify-center items-center rounded-[50%] bg-[#a4b9f2]"
               onClick={handleToggleTheme}
-              title={themeIcon ? "Light" : "Valentine"}
+              title={themeIcon ? "Light" : "dark"}
             >
-              {themeIcon ? < FaSun/> : <FaMoon />}
+              {themeIcon ? <FaSun /> : <FaMoon />}
             </button>
           </div>
         </div>
@@ -178,4 +201,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
-<h1>This is Navbar</h1>;
+
