@@ -27,7 +27,7 @@ const Navbar = () => {
     },[theme])
 
   return (
-    <div className="border-b-2 bg-gray-100 ">
+    <div className="border-b-2 bg-cyan-200 ">
       <div className="navbar container mx-auto p-3 sm:p-5">
         <div className="navbar-start">
           <div className="dropdown font-bold ">
