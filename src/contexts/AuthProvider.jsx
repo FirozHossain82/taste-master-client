@@ -14,10 +14,10 @@ import {
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
-const githubProvider = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
