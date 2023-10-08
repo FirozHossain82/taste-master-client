@@ -27,10 +27,10 @@ const Navbar = () => {
     },[theme])
 
   return (
-    <div className="border-b-2 bg-cyan-100">
+    <div className="border-b-2 bg-gray-100">
       <div className="navbar container mx-auto p-3 sm:p-5">
         <div className="navbar-start">
-          <div className="dropdown ">
+          <div className="dropdown font-bold ">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-cyan-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-gray-100 rounded-box w-56 "
             >
               <li>
                 <NavLink
@@ -57,7 +57,7 @@ const Navbar = () => {
                   aria-label="Home"
                   title="Home"
                   className={({ isActive }) =>
-                    isActive ? "active" : "default"
+                    isActive ? "border-2 border-emerald-400" : "default"
                   }
                 >
                   Home
@@ -69,7 +69,7 @@ const Navbar = () => {
                   aria-label="Blog"
                   title="Blog"
                   className={({ isActive }) =>
-                    isActive ? "active" : "default"
+                    isActive ? "border-2 border-emerald-400" : "default"
                   }
                 >
                   Blog
@@ -81,7 +81,7 @@ const Navbar = () => {
                   aria-label="About"
                   title="About"
                   className={({ isActive }) =>
-                    isActive ? "active" : "default"
+                    isActive ? "border-2 border-emerald-400" : "default"
                   }
                 >
                   About
@@ -93,7 +93,7 @@ const Navbar = () => {
                   aria-label="Contact"
                   title="Contact"
                   className={({ isActive }) =>
-                    isActive ? "active" : "default"
+                    isActive ? "border-2 border-emerald-400" : "default"
                   }
                 >
                   Contact
@@ -101,18 +101,18 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link className="normal-case font-semibold text-xl sm:text-2xl p-0">
+          <Link className="normal-case font-semibold font-serif text-xl text-blue-900 sm:text-2xl p-0">
              Taste Master
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="navbar-center font-bold  hidden lg:flex">
+          <ul className="menu menu-horizontal px-2">
             <li>
               <NavLink
                 to="/"
                 aria-label="Home"
                 title="Home"
-                className={({ isActive }) => (isActive ? "active" : "default")}
+                className={({ isActive }) => (isActive ? " border-2 border-emerald-400" : "default")}
               >
                 Home
               </NavLink>
@@ -122,7 +122,7 @@ const Navbar = () => {
                 to="/blog"
                 aria-label="Blog"
                 title="Blog"
-                className={({ isActive }) => (isActive ? "active" : "default")}
+                className={({ isActive }) => (isActive ? "border-2 border-emerald-400" : "default")}
               >
                 Blog
               </NavLink>
@@ -132,7 +132,7 @@ const Navbar = () => {
                 to="/about"
                 aria-label="About"
                 title="About"
-                className={({ isActive }) => (isActive ? "active" : "default")}
+                className={({ isActive }) => (isActive ? "border-2 border-emerald-400" : "default")}
               >
                 About
               </NavLink>
@@ -142,7 +142,7 @@ const Navbar = () => {
                 to="/contact"
                 aria-label="Contact"
                 title="Contact"
-                className={({ isActive }) => (isActive ? "active" : "default")}
+                className={({ isActive }) => (isActive ? "border-2 border-emerald-400" : "default")}
               >
                 Contact
               </NavLink>
@@ -154,14 +154,14 @@ const Navbar = () => {
             {user ? (
               <Link
                 onClick={handleLogOut}
-                className="my-btn hover:bg-transparent transition-colors duration-200 ease-in-out"
+                className="my-btn hover:bg-transparent transition-colors font-bold duration-200 ease-in-out"
               >
                 LogOut
               </Link>
             ) : (
               <Link
                 to="/login"
-                className="my-btn hover:bg-transparent transition-colors duration-200 ease-in-out"
+                className=" my-btn hover:bg-transparent hover:text-black transition-colors duration-200 ease-in-out"
               >
                 Login
               </Link>
@@ -176,7 +176,7 @@ const Navbar = () => {
                 {user?.photoURL ? (
                   <img
                     src={user?.photoURL}
-                    className="w-8 h-8 sm:w-12 sm:h-12 rounded-[50%] border-2 border-[#FACC15] object-cover object-center"
+                    className="w-8 h-8 sm:w-12 sm:h-12 rounded-[50%] border-2 border-blue-600 object-cover object-center"
                     alt={user?.displayName}
                   />
                 ) : (
@@ -187,7 +187,7 @@ const Navbar = () => {
           )}
           <div>
             <button
-              className="w-7 h-7 sm:w-10 sm:h-10 text-lg flex justify-center items-center rounded-[50%] bg-[#a4b9f2]"
+              className="w-7 h-7 sm:w-10 sm:h-10 text-lg flex justify-center items-center rounded-[50%] bg-blue-300"
               onClick={handleToggleTheme}
               title={themeIcon ? "Light" : "dark"}
             >

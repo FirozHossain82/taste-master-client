@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBCJAcW6hsMGd2PSSkqHpUScQ9cnmfzO-w",
-  authDomain: "tasete-master.firebaseapp.com",
-  projectId: "tasete-master",
-  storageBucket: "tasete-master.appspot.com",
-  messagingSenderId: "214375182146",
-  appId: "1:214375182146:web:759660db76cc5b2e9ce2db"
+  apiKey: "AIzaSyBdApE4Zjx9uosyYq1C-LJ3Z9vT_iEVYKM",
+  authDomain: "taste-master-9d902.firebaseapp.com",
+  projectId: "taste-master-9d902",
+  storageBucket: "taste-master-9d902.appspot.com",
+  messagingSenderId: "334408112902",
+  appId: "1:334408112902:web:805a6e55931e1444255c87"
 };
 
 // Initialize Firebase
