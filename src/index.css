@@ -26,15 +26,7 @@
     @apply flex gap-3 mx-auto justify-center items-center border font-semibold rounded-[57px] p-3 w-full cursor-pointer transition-all duration-200 ease-in-out
 }
 
-.card-shadow {
-    box-shadow: 0px 1px 23px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* th {
-    background-color: #EBF8FF !important;
-} */
-
-.no-sticky {
+/* .no-sticky {
     position: static !important;
 }
 
@@ -48,4 +40,13 @@
 
 .tabs a {
     transition: all .3s ease-in-out;
+} */
+
+.recipe-img {
+    transform: scale(1);
+    transition: all .25s linear;
+}
+
+.recipe-img:hover {
+    transform: scale(1.1);
 }

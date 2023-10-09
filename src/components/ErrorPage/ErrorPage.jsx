@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
-    const {} = useRouteError();
+    const {error, status} = useRouteError();
     return (
         <section className='container mx-auto p-10 h-[100vh] flex items-center'>
             <div className='max-w-md  mx-auto text-center'>
@@ -12,7 +12,7 @@ const ErrorPage = () => {
                          src="https://i.ibb.co/rxkCnxJ/Error-Page-Main.jpg" alt="" />
                     </div>
                     <p className='text-2xl text-sky-600 font-semibold md:text-3xl mx-auto my-10'>
-                        {error?.message}
+                       {status || 404} {error?.message}
                     </p>
                     <div>
                         <Link to='/'

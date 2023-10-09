@@ -6,14 +6,15 @@ import Contact from "../components/Contact/Contact.jsx";
 import About from "../components/About/About.jsx";
 import Login from "../components/Login/Login/Login.jsx";
 import Register from "../components/Login/Register/Register.jsx";
-// import ErrorPage from '../components/ErrorPage/ErrorPage.jsx';
+import ErrorPage from "../components/ErrorPage/ErrorPage.jsx";
+
 
 
 const router = createBrowserRouter([
     {
         path:"/",
         element:<Main></Main>,
-        // errorElement:<ErrorPage></ErrorPage>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',
