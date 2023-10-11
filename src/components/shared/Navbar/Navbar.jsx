@@ -19,7 +19,7 @@ const Navbar = () => {
     const [themeIcon, setThemeIcon] = useState(true);
 
     const handleToggleTheme = () =>{
-        setTheme(theme ==="light"? "dark": "light");
+        setTheme(theme ==="light"? "valentine": "light");
         setThemeIcon(!themeIcon);
     }
     useEffect(() =>{
@@ -189,7 +189,7 @@ const Navbar = () => {
             <button
               className="w-7 h-7 sm:w-10 sm:h-10 text-lg flex justify-center items-center rounded-[50%] bg-blue-300"
               onClick={handleToggleTheme}
-              title={themeIcon ? "Light" : "dark"}
+              title={themeIcon ? "Light" : "Valentine"}
             >
               {themeIcon ? <FaSun /> : <FaMoon />}
             </button>

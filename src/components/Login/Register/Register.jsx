@@ -99,12 +99,12 @@ const Register = () => {
   };
 
   return (
-    <div className="container mx-auto flex flex-col lg:flex-row justify-center items-center px-10 my-12 ">
-      <div className="w-full lg:w-[50%]">
+    <div className="container mx-auto flex flex-col lg:flex-row justify-center items-center px-10  ">
+      <div className="w-full lg:w-[40%]">
         <Lottie animationData={registerAnimation} loop={true} />
       </div>
-      <div className="w-full lg:w-[40%] bg-slate-100 px-5 py-10  rounded-xl shadow-xl">
-        <h2 className="text-center text-3xl  font-serif font-semibold mb-12">
+      <div className="w-full lg:w-[40%] bg-slate-100 px-5 py-10 mt-10 mb-10  rounded-xl shadow-xl">
+        <h2 className="text-center text-3xl  font-serif font-semibold mb-5">
           Register
         </h2>
         <form onSubmit={handleSubmit}>

@@ -122,11 +122,11 @@ const Login = () => {
 }
   useTittle("Login");
   return (
-    <div className="my-container flex flex-col lg:flex-row justify-center items-center my-12">
+    <div className="my-container flex flex-col lg:flex-row justify-center items-center ">
       <div className="w-full lg:w-[40%]">
       <Lottie animationData={loginAnimation} loop={true} />
       </div>
-      <div className="w-full lg:w-[40%] bg-slate-100 px-5 py-10  rounded-xl shadow-xl ">
+      <div className="w-full lg:w-[40%] bg-slate-100 px-5 py-10   rounded-xl shadow-xl my-12 ">
         <h2 className="text-3xl text-center font-semibold mb-10">
           Login to your account
         </h2>

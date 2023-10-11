@@ -64,7 +64,7 @@ const Banner = () => {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="w-full lg:h-[80vh]">
+        <div className="w-full  lg:h-[80vh]">
           <img className="w-full" src={banner5} alt="" />
         </div>
       </SwiperSlide>
