@@ -29,9 +29,9 @@ const Navbar = () => {
   return (
     <div className="border-b-2 bg-cyan-200 ">
       <div className="navbar container mx-auto p-3 sm:p-5">
-        <div className="navbar-start">
-          <div className="dropdown font-bold ">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+         <div className="navbar-start">
+          <div className="dropdown font-bold  ">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -104,8 +104,8 @@ const Navbar = () => {
           <Link className="normal-case font-semibold font-serif text-xl text-blue-900 sm:text-2xl p-0">
              Taste Master
           </Link>
-        </div>
-        <div className="navbar-center font-bold  hidden lg:flex">
+        </div> 
+        <div className="navbar-center font-bold  hidden lg:flex ">
           <ul className="menu menu-horizontal px-2">
             <li>
               <NavLink
@@ -200,5 +200,5 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default  Navbar;
 
