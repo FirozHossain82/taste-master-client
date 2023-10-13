@@ -2,11 +2,16 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className="py-10">
-        <h1 className="text-center text-4xl font-bold   text-purple-600">
-          Our Blogs
-        </h1>
-        <div className="card w-[70%] mx-auto bg-sky-300 shadow-md my-10">
+        <div className=" container mx-auto px-3 sm:px-5">
+        <div
+        style={{
+          backgroundImage: `url(https://i.ibb.co/2ngSwpX/testimonial-bg.jpg)`,
+        }}
+        className="h-[50vh] flex justify-center items-center  bg-[#debaba] bg-opacity-[0.5] bg-blend-multiply bg-cover bg-center"
+      >
+        <h2 className="font-extrabold text-5xl text-purple-500">Blogs</h2>
+      </div>
+        <div className="card w-[100%]mx-auto bg-sky-300 shadow-md mt-10">
           <div className="card-body">
             <h2 className=" font-bold text-xl text-orange-700">
               1.Difference between SQL and NoSQL?
@@ -24,7 +29,7 @@ const Blog = () => {
             </p>
           </div>
         </div>
-        <div className="card w-[70%] mx-auto bg-sky-300 shadow-md my-10">
+        <div className="card w-[100%]mx-auto bg-sky-300 shadow-md my-10">
           <div className="card-body">
             <h2 className="font-bold text-xl  text-orange-700">
               {" "}
@@ -42,7 +47,7 @@ const Blog = () => {
             </p>
           </div>
         </div>
-        <div className="card w-[70%] mx-auto bg-sky-300 shadow-md my-10">
+        <div className="card w-[100%]mx-auto bg-sky-300 shadow-md my-10">
           <div className="card-body">
             <h2 className="font-bold text-xl text-orange-700">
               3.What is the difference between javascript and NodeJS?
@@ -58,7 +63,7 @@ const Blog = () => {
             </p>
           </div>
         </div>
-        <div className="card w-[70%] mx-auto bg-sky-300 shadow-md my-10">
+        <div className="card w-[100%]mx-auto bg-sky-300 shadow-md my-10">
           <div className="card-body">
             <h2 className="font-bold text-xl text-orange-700">
               4.How does NodeJS handle multiple requests at the same time?
