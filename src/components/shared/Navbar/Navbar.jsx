@@ -27,7 +27,7 @@ const Navbar = () => {
     },[theme])
 
   return (
-    <div className="border-b-2 bg-cyan-200 ">
+    <div className="border-b-2 bg-cyan-200  ">
       <div className="navbar container mx-auto p-3 sm:p-5">
          <div className="navbar-start">
           <div className="dropdown font-bold  ">
@@ -49,7 +49,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-cyan-200 rounded-box w-56 "
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-cyan-200 rounded-box w-80 fixed z-20 "
             >
               <li>
                 <NavLink
@@ -75,7 +75,7 @@ const Navbar = () => {
                   Blog
                 </NavLink>
               </li>
-              <li>
+             {/*  <li>
                 <NavLink
                   to="/about"
                   aria-label="About"
@@ -86,7 +86,7 @@ const Navbar = () => {
                 >
                   About
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   to="/contact"
@@ -127,7 +127,7 @@ const Navbar = () => {
                 Blog
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink
                 to="/about"
                 aria-label="About"
@@ -136,7 +136,7 @@ const Navbar = () => {
               >
                 About
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink
                 to="/contact"

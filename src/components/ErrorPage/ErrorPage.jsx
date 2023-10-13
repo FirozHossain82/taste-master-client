@@ -9,7 +9,7 @@ const ErrorPage = () => {
                     <div className='flex flex-col items-center'>
                         <img 
                         className='w-[300] sm:w-[450px]'
-                         src="https://i.ibb.co/rxkCnxJ/Error-Page-Main.jpg" alt="" />
+                         src="https://i.ibb.co/ZNWmXLY/errorpage.jpg" alt="" />
                     </div>
                     <p className='text-2xl text-sky-600 font-semibold md:text-3xl mx-auto my-10'>
                        {status || 404} {error?.message}

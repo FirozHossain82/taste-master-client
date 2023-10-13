@@ -18,8 +18,17 @@ const ChefRecipes = ({ recipe }) => {
 
   const handleFavorite = () => {
     setFavorite(true);
-    toast.success(`${recipeName} has been added your favorite`);
+    toast.success(`${recipeName} has been added your favorite`,{
+      icon:<FaHeart/>
+    });
   };
+
+/*   const myStyles = {
+    itemShapes: Star,
+    activeFillColor: '#ffb700',
+    inactiveFillColor: '#fbf1a9',
+}; */
+
 
   return (
     <div className="card bg-base-100 shadow-xl">
