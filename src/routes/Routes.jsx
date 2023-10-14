@@ -8,46 +8,50 @@ import Login from "../components/Login/Login/Login.jsx";
 import Register from "../components/Login/Register/Register.jsx";
 import ErrorPage from "../components/ErrorPage/ErrorPage.jsx";
 import ChefDetails from "../components/ChefDetails/ChefDetails/ChefDetails.jsx";
-
-
+import PrivateRoute from "./PrivateRoute.jsx";
 
 const router = createBrowserRouter([
-    {
-        path:"/",
-        element:<Main></Main>,
-        errorElement:<ErrorPage></ErrorPage>,
-        children:[
-            {
-                path:'/',
-                element:<Home></Home>
-            },
-            {
-                path:'/blog',
-                element:<Blog></Blog>
-            },
-            {
-                path:'/contact',
-                element:<Contact></Contact>
-            },
-           /*  {
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+      /*  {
                 path:'/about',
                 element:<About></About>
             }, */
-            {
-                path:'/login',
-                element:<Login></Login>
-            },
-            {
-                path:'/register',
-                element:<Register></Register>
-            },
-            {
-                path:"/chef-recipes/:id",
-                element:<ChefDetails></ChefDetails>,
-                loader:({params}) => fetch(`http://localhost:5000/chef-recipes/${params.id}`)
-            }
-        ]
-    }
-])
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/chef-recipes/:id",
+        element: (
+          <PrivateRoute>
+            <ChefDetails></ChefDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/chef-recipes/${params.id}`),
+      },
+    ],
+  },
+]);
 
 export default router;
