@@ -3,10 +3,12 @@ import { useLoaderData } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
 import ChefRecipes from "../ChefRecipes/ChefRecipes.jsx";
+import useTittle from './../../hooks/useTittle.jsx';
+
 const ChefDetails = () => {
   const [chef, setChef] = useState([]);
   const chefRecipe = useLoaderData();
-
+  useTittle("ChefDetails");
   useEffect(() => {
     const chef_id = chefRecipe[0]?.chef_id;
     fetch(`http://localhost:5000/chefs/${chef_id}`)
