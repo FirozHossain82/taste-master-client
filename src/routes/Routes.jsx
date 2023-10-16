@@ -48,7 +48,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chef-recipes/${params.id}`),
+          fetch(`https://taste-master-server-144df618h-firozhossain82.vercel.app/chef-recipes/${params.id}`),
       },
     ],
   },

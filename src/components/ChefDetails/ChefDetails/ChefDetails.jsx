@@ -11,7 +11,7 @@ const ChefDetails = () => {
   useTittle("ChefDetails");
   useEffect(() => {
     const chef_id = chefRecipe[0]?.chef_id;
-    fetch(`http://localhost:5000/chefs/${chef_id}`)
+    fetch(`https://taste-master-server-144df618h-firozhossain82.vercel.app/chefs/${chef_id}`)
       .then((res) => res.json())
       .then((data) => setChef(data))
       .catch((error) => {

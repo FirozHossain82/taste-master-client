@@ -45,7 +45,7 @@ const ContactFrom = () => {
         <div className="flex items-center justify-between">
           <button
             type="submit"
-            className="my-btn w-fit flex gap-2 items-center hover:bg-transparent hover:text-[#13795B] transition-colors duration-200 ease-in-out"
+            className="btn btn-outline btn-primary"
           >
             SEND MESSAGE <FaArrowCircleRight />
           </button>

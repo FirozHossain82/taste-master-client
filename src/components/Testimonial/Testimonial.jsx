@@ -20,7 +20,7 @@ const Testimonial = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/testimonials")
+    fetch("https://taste-master-server-144df618h-firozhossain82.vercel.app/testimonials")
       .then((res) => res.json())
       .then((data) => {
         setTestimonials(data);
